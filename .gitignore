@@ -4,6 +4,7 @@
 config.php
 /config*.php
 !config-dist.php
+!/theme/*/config.php
 
 # Composer dependencies
 /vendor/
