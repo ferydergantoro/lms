@@ -890,7 +890,7 @@ abstract class sql_generator {
     }
 
     /**
-     * Given one xmldb_table and one xmldb_index, return the SQL statements needed to drop the index from the table.
+     * Given one xmldb_table and one xmldb_key, return the SQL statements needed to drop the key from the table.
      *
      * @param xmldb_table $xmldb_table The table related to $xmldb_key.
      * @param xmldb_key $xmldb_key The xmldb_key to drop.
@@ -1386,9 +1386,16 @@ abstract class sql_generator {
     }
 
     /**
-     * Returns all reserved words in supported databases.
-     * Reserved words should be lowercase.
-     * @return array ('word'=>array(databases))
+     * Returns all reserved words from all supported database systems.
+     * 
+     * This method collects and compiles reserved words from all database systems
+     * that Moodle supports. The words are returned in a structured array where
+     * each reserved word is a key, and the value is an array of database systems
+     * where that word is reserved.
+     * 
+     * @return array An associative array where keys are reserved words and values
+     *               are arrays containing the names of database systems where the
+     *               word is reserved
      */
     public static function getAllReservedWords() {
         global $CFG;
