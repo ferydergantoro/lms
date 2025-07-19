@@ -1,0 +1,96 @@
+# Moodle .gitignore file
+
+# Config files that may contain sensitive information
+config.php
+/config*.php
+!config-dist.php
+
+# Composer dependencies
+/vendor/
+/node_modules/
+
+# Data directories
+/moodledata/
+/moodledata_*/
+/data/
+
+# Cache, logs, and session files
+/cache/
+/sessions/
+*.log
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Build and temporary files
+/npm-debug.log
+/yarn-error.log
+.sass-cache/
+.eslintcache
+.phpunit.result.cache
+.php_cs.cache
+/behat_*.yml
+!/behat.yml.dist
+/phpunit_*.xml
+!/phpunit.xml.dist
+*.orig
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Uploaded files and user data
+/userpix/*
+!/userpix/index.html
+/backup/
+/filedir/
+/trashdir/
+/temp/
+
+# Plugin-generated JS
+/amd/build/
+*/amd/build/
+
+# Version control specific
+.git/
+.github/
+.gitattributes
+
+# Grunt intermediate storage
+.grunt
+
+# Compiled CSS
+/theme/*/style/*.css
+/theme/*/style/**/*.css
+!/theme/*/style/editor.css
+
+# Compiled JavaScript
+/lib/editor/tiny/*/js/*.min.js
+
+# Generated documentation
+/phpdocs/
+
+# MoodleCloud-specific files
+/local/codechecker/
+.htaccess
+
+# Development tools
+.shifter.json
+.stylelintrc
+.eslintrc
+
+# Tests
+/behat_config.php
+
+# Privacy API related
+/privacy/
+/tags
+/muc/
+/localcache/
+/lock/
