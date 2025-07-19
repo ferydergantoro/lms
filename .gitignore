@@ -4,6 +4,7 @@
 config.php
 /config*.php
 !config-dist.php
+!/theme/*/config.php
 
 # Composer dependencies
 /vendor/
@@ -18,6 +19,7 @@ config.php
 /cache/
 /sessions/
 *.log
+/moodle_sessions/
 
 # IDE and editor files
 .idea/
@@ -94,3 +96,22 @@ Thumbs.db
 /muc/
 /localcache/
 /lock/
+
+# Database dumps
+*.sql
+*.gz
+*.bz2
+*.dump
+
+# Code coverage reports
+/coverage/
+/coverageReport/
+/.phpunit.cache/
+/tests/coverage/
+
+# Local development plugins
+/local/dev*/
+/local/temp*/
+
+# Admin dashboard screenshots (sometimes saved when debugging)
+/admin/screenshots/
